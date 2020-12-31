@@ -23,4 +23,3 @@ blocks:
             - cache store
             - 'bundle exec rake db:setup'
             - bundle exec rspec
-            -bundle exec rails assets:precompile
