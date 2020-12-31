@@ -20,6 +20,7 @@ blocks:
             - sem-version ruby 2.7.2
             - cache restore
             - bundle install --deployment --path vendor/bundle
+            -bundle exec rails assets:precompile
             - cache store
             - 'bundle exec rake db:setup'
             - bundle exec rspec
