@@ -12,6 +12,8 @@ blocks:
           value: 'postgresql://postgres:@0.0.0.0:5432/myapp_test'
         - name: RAILS_ENV
           value: test
+        - name: NODE_ENV
+          value: test
       jobs:
         - name: Test
           commands:
@@ -22,7 +24,4 @@ blocks:
             - bundle install --deployment --path vendor/bundle
             - cache store
             - 'bundle exec rake db:setup'
-            - 'bundle exec rails webpacker:install'
             - bundle exec rspec
-        - name: 'Job #2'
-          commands: []
