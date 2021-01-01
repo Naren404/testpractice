@@ -5,7 +5,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.3-stretch-node
+      - image: circleci/ruby:2.7.2-stretch-node
     executor: ruby/default
     steps:
       - checkout
@@ -13,4 +13,3 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
-      -gem install bundler
